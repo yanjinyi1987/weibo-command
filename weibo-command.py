@@ -23,8 +23,10 @@ def main():
     #获得url，进行浏览器调用，手动的，呵呵！
     #获得code
     code = 'd624fa7b15d139c453023f4b70731e79'
-    #r=client.request_access_token(code)
+    #r=client.request_access_token(code) #这个调用对于一个code只能执行一次
+    #但是返回的r.access_token都是一样的，可以将token记录下来，隔一段时间再调用一次
     #access_token = r.access_token # 新浪返回的token，类似abc123xyz456
+    #如果过期了，需要将上面的几步再执行一次获得新的access_token，并手动替换
     access_token = '2.00F9dUnB0kKJTs9164339a26ROiY8B'
     
     #print access_token
